@@ -12,6 +12,7 @@ class Composition:
         data_obj.wQty = json_data.get_float("w")
         data_obj.wPct = json_data.get_float("W")
 
+
 class CompositeIndexEvent:
 
     def __init__(self):

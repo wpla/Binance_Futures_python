@@ -39,7 +39,7 @@ class Candlestick:
         data_obj.takerBuyBaseAssetVolume = json_data.get_float("V")
         data_obj.takerBuyQuoteAssetVolume = json_data.get_float("Q")
         data_obj.ignore = json_data.get_int("B")
-  
+
         return data_obj
 
 
@@ -60,4 +60,3 @@ class CandlestickEvent:
         data = Candlestick.json_parse(json_wrapper.get_object("k"))
         candlestick_event.data = data
         return candlestick_event
-

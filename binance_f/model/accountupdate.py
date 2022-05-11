@@ -56,14 +56,14 @@ class AccountUpdate:
         result.transactionTime = json_data.get_int("T")
 
         data_group = json_data.get_object("a")
-        
+
         element_list = list()
         data_list = data_group.get_array("B")
         for item in data_list.get_items():
             element = Balance.json_parse(item)
             element_list.append(element)
         result.balances = element_list
-       
+
         if data_group.contain_key("P"):
             element_list = list()
             data_list = data_group.get_array("P")

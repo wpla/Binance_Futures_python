@@ -32,7 +32,6 @@ class OrderUpdate:
         self.callbackRate = 0.0
         self.positionSide = None
 
-
     @staticmethod
     def json_parse(json_data):
         result = OrderUpdate()

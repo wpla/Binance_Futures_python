@@ -7,7 +7,7 @@ class Bracket:
         self.notionalFloor = 0.0
         self.maintMarginRatio = 0.0
         self.cum = 0.0
-        
+
     @staticmethod
     def json_parse(json_data):
         result = Bracket()
@@ -19,12 +19,13 @@ class Bracket:
         result.cum = json_data.get_float("cum")
         return result
 
+
 class LeverageBracket:
 
     def __init__(self):
         self.symbol = ""
         self.brackets = list()
-    
+
     @staticmethod
     def json_parse(json_data):
         result = LeverageBracket()

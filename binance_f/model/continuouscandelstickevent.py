@@ -1,4 +1,6 @@
 import copy
+
+
 class ContinuousCandlestick:
 
     def __init__(self):
@@ -63,4 +65,3 @@ class ContinuousCandlestickEvent:
         data = ContinuousCandlestick.json_parse(json_wrapper.get_object("k"))
         continuous_candlestick_event.data = copy.deepcopy(data)
         return continuous_candlestick_event
-

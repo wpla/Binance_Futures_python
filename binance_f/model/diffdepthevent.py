@@ -47,6 +47,6 @@ class DiffDepthEvent:
             order.price = val[0]
             order.qty = val[1]
             ask_list.append(order)
-        order_book.asks = ask_list        
+        order_book.asks = ask_list
 
         return order_book

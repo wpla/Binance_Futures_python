@@ -1,6 +1,4 @@
-
 class BinanceApiException(Exception):
-
     RUNTIME_ERROR = "RuntimeError"
     INPUT_ERROR = "InputError"
     KEY_MISSING = "KeyMissing"

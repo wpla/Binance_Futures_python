@@ -1,8 +1,9 @@
-import threading
 import logging
+import threading
+
 from apscheduler.schedulers.blocking import BlockingScheduler
-from binance_f.impl.websocketconnection import ConnectionState
 from binance_f.impl.utils.timeservice import get_current_timestamp
+from binance_f.impl.websocketconnection import ConnectionState
 
 
 def watch_dog_job(*args):

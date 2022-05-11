@@ -47,6 +47,6 @@ class OrderBookEvent:
             order.price = val[0]
             order.qty = val[1]
             ask_list.append(order)
-        result.asks = ask_list        
+        result.asks = ask_list
 
         return result

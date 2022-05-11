@@ -1,14 +1,12 @@
-
-
 class LongShortRatio:
 
     def __init__(self):
         self.symbol = ""
-        self.longShortRatio = 0.0  #  long/short account num ratio of top traders
+        self.longShortRatio = 0.0  # long/short account num ratio of top traders
         self.longAccount = 0.0  # long account num ratio of top traders
         self.shortAccount = 0.0  # short account num ratio of top traders 
         self.timestamp = 0
-    
+
     @staticmethod
     def json_parse(json_data):
         result = LongShortRatio()

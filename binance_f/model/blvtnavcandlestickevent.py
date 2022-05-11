@@ -29,7 +29,7 @@ class BLVTNAVCandlestick:
         data_obj.low = json_data.get_float("l")
         data_obj.lev = json_data.get_float("v")
         data_obj.numUpdates = json_data.get_int("n")
-  
+
         return data_obj
 
 
@@ -50,4 +50,3 @@ class BLVTNAVCandlestickEvent:
         data = BLVTNAVCandlestick.json_parse(json_wrapper.get_object("k"))
         candlestick_event.data = data
         return candlestick_event
-

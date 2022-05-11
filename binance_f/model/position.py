@@ -14,7 +14,6 @@ class Position:
         self.isolatedMargin = 0.0
         self.positionSide = ""
 
-
     @staticmethod
     def json_parse(json_data):
         result = Position()

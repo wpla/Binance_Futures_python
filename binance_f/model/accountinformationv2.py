@@ -104,14 +104,14 @@ class AccountInformationV2:
         result.totalUnrealizedProfit = json_data.get_float("totalUnrealizedProfit")
         result.totalWalletBalance = json_data.get_float("totalWalletBalance")
         result.updateTime = json_data.get_int("updateTime")
-        
+
         element_list = list()
         data_list = json_data.get_array("assets")
         for item in data_list.get_items():
             element = AssetV2.json_parse(item)
             element_list.append(element)
         result.assets = element_list
-        
+
         element_list = list()
         data_list = json_data.get_array("positions")
         for item in data_list.get_items():

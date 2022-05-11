@@ -17,5 +17,5 @@ class Trade:
         result.quoteQty = json_data.get_float("quoteQty")
         result.time = json_data.get_int("time")
         result.isBuyerMaker = json_data.get_boolean("isBuyerMaker")
-        
+
         return result

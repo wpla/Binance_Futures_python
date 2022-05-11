@@ -1,5 +1,3 @@
-
-
 class TakerBuySellRatio:
 
     def __init__(self):
@@ -7,7 +5,7 @@ class TakerBuySellRatio:
         self.buyVol = 0.0
         self.sellVol = 0.0
         self.timestamp = 0
-    
+
     @staticmethod
     def json_parse(json_data):
         result = TakerBuySellRatio()

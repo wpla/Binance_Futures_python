@@ -1,15 +1,12 @@
-import urllib.parse
-
 from binance_f.constant.system import WebSocketDefine
-from binance_f.impl.websocketrequestimpl import WebsocketRequestImpl
 from binance_f.impl.websocketconnection import WebsocketConnection
+from binance_f.impl.websocketrequestimpl import WebsocketRequestImpl
 from binance_f.impl.websocketwatchdog import WebSocketWatchDog
-from binance_f.impl.restapirequestimpl import RestApiRequestImpl
-from binance_f.model import *
 from binance_f.model.constant import *
 
+
 # For develop
-from binance_f.base.printobject import *
+
 
 class SubscriptionClient(object):
 
@@ -86,7 +83,8 @@ class SubscriptionClient(object):
         request = self.websocket_request_impl.subscribe_mark_price_event(symbol, callback, error_handler)
         self.__create_connection(request)
 
-    def subscribe_continuous_candlestick_event(self, pair: 'str', contract_type: 'ContractType', interval: 'CandlestickInterval',
+    def subscribe_continuous_candlestick_event(self, pair: 'str', contract_type: 'ContractType',
+                                               interval: 'CandlestickInterval',
                                                callback,
                                                error_handler=None):
         """
@@ -99,7 +97,7 @@ class SubscriptionClient(object):
         request = self.websocket_request_impl.subscribe_continuous_candlestick_event(pair, contract_type, interval,
                                                                                      callback, error_handler)
         self.__create_connection(request)
-    
+
     def subscribe_candlestick_event(self, symbol: 'str', interval: 'CandlestickInterval', callback,
                                     error_handler=None):
         """
@@ -111,7 +109,7 @@ class SubscriptionClient(object):
         """
         request = self.websocket_request_impl.subscribe_candlestick_event(symbol, interval, callback, error_handler)
         self.__create_connection(request)
-           
+
     def subscribe_symbol_miniticker_event(self, symbol: 'str', callback, error_handler=None):
         """
         Individual Symbol Mini Ticker Stream
@@ -123,7 +121,7 @@ class SubscriptionClient(object):
         """
         request = self.websocket_request_impl.subscribe_symbol_miniticker_event(symbol, callback, error_handler)
         self.__create_connection(request)
-  
+
     def subscribe_all_miniticker_event(self, callback, error_handler=None):
         """
         All Market Mini Tickers Stream
@@ -148,7 +146,7 @@ class SubscriptionClient(object):
         """
         request = self.websocket_request_impl.subscribe_symbol_ticker_event(symbol, callback, error_handler)
         self.__create_connection(request)
-      
+
     def subscribe_all_ticker_event(self, callback, error_handler=None):
         """
         All Market Tickers Stream
@@ -171,7 +169,7 @@ class SubscriptionClient(object):
         """
         request = self.websocket_request_impl.subscribe_symbol_bookticker_event(symbol, callback, error_handler)
         self.__create_connection(request)
-    
+
     def subscribe_all_bookticker_event(self, callback, error_handler=None):
         """
         All Book Tickers Stream
@@ -204,8 +202,9 @@ class SubscriptionClient(object):
         """
         request = self.websocket_request_impl.subscribe_all_liquidation_event(callback, error_handler)
         self.__create_connection(request)
-             
-    def subscribe_book_depth_event(self, symbol: 'str', limit: 'int', callback, error_handler=None, update_time: 'UpdateTime' = UpdateTime.INVALID):
+
+    def subscribe_book_depth_event(self, symbol: 'str', limit: 'int', callback, error_handler=None,
+                                   update_time: 'UpdateTime' = UpdateTime.INVALID):
         """
         Partial Book Depth Streams
 
@@ -214,10 +213,12 @@ class SubscriptionClient(object):
         Stream Names: <symbol>@depth<levels> OR <symbol>@depth<levels>@100ms.
         """
         print(update_time)
-        request = self.websocket_request_impl.subscribe_book_depth_event(symbol, limit, update_time, callback, error_handler)
+        request = self.websocket_request_impl.subscribe_book_depth_event(symbol, limit, update_time, callback,
+                                                                         error_handler)
         self.__create_connection(request)
 
-    def subscribe_diff_depth_event(self, symbol: 'str', callback, error_handler=None, update_time: 'UpdateTime' = UpdateTime.INVALID):
+    def subscribe_diff_depth_event(self, symbol: 'str', callback, error_handler=None,
+                                   update_time: 'UpdateTime' = UpdateTime.INVALID):
         """
         Diff. Depth Stream
 
@@ -271,7 +272,8 @@ class SubscriptionClient(object):
 
         Update Speed: 300ms
         """
-        request = self.websocket_request_impl.subscribe_blvt_nav_candlestick_event(symbol, interval, callback, error_handler)
+        request = self.websocket_request_impl.subscribe_blvt_nav_candlestick_event(symbol, interval, callback,
+                                                                                   error_handler)
         self.__create_connection(request)
 
     def subscribe_composite_index_event(self, symbol, callback, error_handler=None):

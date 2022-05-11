@@ -17,6 +17,7 @@ class Indicator:
         result.triggerValue = json_data.get_float("triggerValue")
         return result
 
+
 class ApiTradingStatus:
     def __init__(self):
         self.indicators = object()
@@ -24,7 +25,7 @@ class ApiTradingStatus:
     @staticmethod
     def json_parse(json_data):
         result = ApiTradingStatus()
-        
+
         element_list = list()
         data_list = json_data.get_array("indicators")
         for item in data_list.get_items():

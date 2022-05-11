@@ -33,5 +33,5 @@ class MyTrade:
         result.side = json_data.get_string("side")
         result.symbol = json_data.get_string("symbol")
         result.time = json_data.get_int("time")
-        
+
         return result

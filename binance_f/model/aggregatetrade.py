@@ -19,5 +19,5 @@ class AggregateTrade:
         trade.lastId = json_data.get_int("l")
         trade.time = json_data.get_int("T")
         trade.isBuyerMaker = json_data.get_boolean("m")
-        
+
         return trade

@@ -1,5 +1,3 @@
-
-
 class MarkPrice:
 
     def __init__(self):
@@ -8,7 +6,7 @@ class MarkPrice:
         self.lastFundingRate = 0.0
         self.nextFundingTime = 0
         self.time = 0
-    
+
     @staticmethod
     def json_parse(json_data):
         result = MarkPrice()

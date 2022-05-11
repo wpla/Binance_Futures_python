@@ -1,13 +1,11 @@
-
-
 class OpenInterestStats:
 
     def __init__(self):
         self.symbol = ""
-        self.sumOpenInterest = 0.0  #  total open interest
+        self.sumOpenInterest = 0.0  # total open interest
         self.sumOpenInterestValue = 0.0  # total open interest value
         self.timestamp = 0
-    
+
     @staticmethod
     def json_parse(json_data):
         result = OpenInterestStats()

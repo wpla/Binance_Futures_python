@@ -4,7 +4,7 @@ class BaseAsset:
         self.baseAsset = ""
         self.weightInQuantity = 0.0
         self.weightInPercentage = 0.0
-        
+
     @staticmethod
     def json_parse(json_data):
         result = BaseAsset()
@@ -13,13 +13,14 @@ class BaseAsset:
         result.weightInPercentage = json_data.get_float("weightInPercentage")
         return result
 
+
 class IndexInfo:
 
     def __init__(self):
         self.symbol = ""
         self.time = 0
         self.baseAssetList = list()
-    
+
     @staticmethod
     def json_parse(json_data):
         result = IndexInfo()

@@ -4,7 +4,7 @@ class FundingRate:
         self.symbol = ""
         self.fundingRate = 0.0
         self.fundingTime = 0
-    
+
     @staticmethod
     def json_parse(json_data):
         result = FundingRate()

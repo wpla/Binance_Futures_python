@@ -8,7 +8,7 @@ class BLVTInfoEvent:
         self.baskets = 0.0
         self.NAV = 0.0
         self.lev = 0.0  # Real Leverage
-        self.target = 0.0  #  Target Leverage
+        self.target = 0.0  # Target Leverage
         self.fundingRate = 0.0
 
     @staticmethod

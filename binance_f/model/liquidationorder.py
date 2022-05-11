@@ -10,7 +10,7 @@ class LiquidationOrder:
         self.type = ""
         self.side = ""
         self.time = 0
-    
+
     @staticmethod
     def json_parse(json_data):
         result = LiquidationOrder()

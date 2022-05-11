@@ -30,5 +30,5 @@ class Candlestick:
         result.takerBuyBaseAssetVolume = val[9]
         result.takerBuyQuoteAssetVolume = val[10]
         result.ignore = val[11]
-  
+
         return result

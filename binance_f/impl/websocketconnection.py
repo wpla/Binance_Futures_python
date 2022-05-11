@@ -1,19 +1,13 @@
-import threading
-import websocket
-import gzip
-import ssl
 import logging
-from urllib import parse
-import urllib.parse
+import ssl
+import threading
 
-from binance_f.base.printtime import PrintDate
-from binance_f.impl.utils.timeservice import get_current_timestamp
-from binance_f.impl.utils.urlparamsbuilder import UrlParamsBuilder
-from binance_f.impl.utils.apisignature import create_signature
+import websocket
 from binance_f.exception.binanceapiexception import BinanceApiException
 from binance_f.impl.utils import *
-from binance_f.base.printobject import *
+from binance_f.impl.utils.timeservice import get_current_timestamp
 from binance_f.model.constant import *
+
 # Key: ws, Value: connection
 websocket_connection_handler = dict()
 
@@ -168,7 +162,7 @@ class WebsocketConnection:
                 self.request.update_callback(SubscribeMessageType.RESPONSE, res)
         except Exception as e:
             self.on_error("Process error: " + str(e)
-                     + " You should capture the exception in your error handler")
+                          + " You should capture the exception in your error handler")
 
     def __on_receive_payload(self, json_wrapper):
         res = None
@@ -183,7 +177,7 @@ class WebsocketConnection:
                 self.request.update_callback(SubscribeMessageType.PAYLOAD, res)
         except Exception as e:
             self.on_error("Process error: " + str(e)
-                     + " You should capture the exception in your error handler")
+                          + " You should capture the exception in your error handler")
 
         if self.request.auto_close:
             self.close()
